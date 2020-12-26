@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import Home from "./Components/Home/Home";
+import axios from "axios";
+
+/** document
+// https://documenter.getpostman.com/view/10808728/SzS8rjbc#b07f97ba-24f4-4ebe-ad71-97fa35f3b683
+// https://restcountries.eu/
+*/
+
+// let urlCovid19= `https://api.covid19api.com/country/${}`;
+let urlInfoCoutry = `https://restcountries.eu/rest/v2/all`;
 
 function App() {
+  const callApiInfoCoutry = async () => {
+    let res = await axios.get(urlInfoCoutry);
+    console.log(res);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Home />
+    </>
   );
 }
 
