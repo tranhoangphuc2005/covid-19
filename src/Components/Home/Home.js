@@ -1,6 +1,8 @@
 import React from "react";
 
-const Home = () => {
+const Home = (props) => {
+  let name = props.name.data;
+  console.log(name);
   return <>home</>;
 };
 
