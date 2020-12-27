@@ -11,7 +11,7 @@ import { useEffect, useState } from "react";
 let urlInfoCoutries = `https://restcountries.eu/rest/v2/all`;
 
 function App() {
-  const [name, setName] = useState([]);
+  const [name, setName] = useState({});
 
   useEffect(() => {
     callApiInfoCoutry();
