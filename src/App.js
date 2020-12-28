@@ -11,7 +11,7 @@ import { useEffect, useState } from "react";
 let urlInfoCoutries = `https://restcountries.eu/rest/v2/all`;
 
 function App() {
-  const [name, setName] = useState({});
+  const [name, setName] = useState([]);
 
   useEffect(() => {
     callApiInfoCoutry();
@@ -19,7 +19,7 @@ function App() {
 
   const callApiInfoCoutry = async () => {
     let res = await axios.get(urlInfoCoutries);
-    setName(res);
+    setName(res.data);
   };
 
   return (
