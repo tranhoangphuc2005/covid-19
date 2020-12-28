@@ -2,7 +2,12 @@ import React from "react";
 import Find from "./Find";
 
 const Home = (props) => {
-  console.log(props.name.name);
+  let name = props.name;
+  console.log(
+    name.map((t) => {
+      t.name;
+    })
+  );
 
   return (
     <>
